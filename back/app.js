@@ -9,9 +9,11 @@ require('dotenv').config();
 // La cadena de conexión a la base de datos
 const conn = process.env.DATABASE_URL;
 const port = 8000;
+
 // Conexión a la base de datos
 mongoose.connect(conn);
 const database = mongoose.connection;
+
 // Verificar la conexión a la base de datos
 database.on('error', (error)=>{
     console.log(error);

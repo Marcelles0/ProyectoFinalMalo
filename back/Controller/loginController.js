@@ -77,15 +77,19 @@ router.post('/', (req, res)=>{
 
 router.post('/refresh', verifyRefreshToken, (req, res) => {
     try{
-        const autheader = req.headers('authorization');
-        if (autheader == null){
+        // const authHeader = req.headers('authorization');
+        let authHeader = "";
+        if (req.headers.hasOwnProperty("authorization")) {
+            authHeader = req.headers["authorization"];
+        }
+        if (authHeader == null){
             res.status(400).json({
                 status: "failed",
                 data: [],
                 error: 'Authorization not found',
             });
         }
-        const token = autheader.split(' ')[1];
+        const token = authHeader.split(' ')[1];
         let payload = [jwt.decode(token)];
         res.status(201).json({
             status: "succeeded",

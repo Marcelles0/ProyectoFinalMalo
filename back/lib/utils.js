@@ -1,15 +1,20 @@
 const jwt = require('jsonwebtoken');
 
 const verifyToken = (req, res, next) => {
-    const autheader = req.headers('authorization');
-    if (autheader == null){
+    // const authHeader = req.headers('authorization');
+    let authHeader = "";
+    if (req.headers.hasOwnProperty("authorization")) {
+        authHeader = req.headers["authorization"];
+    }
+    
+    if (authHeader == null){
         res.status(400).json({
             status: "failed",
             data: [],
             error: 'Authorization not found',
           });
     }
-    const token = autheader.split(' ')[1];
+    const token = authHeader.split(' ')[1];
     if (token == null){
         res.status(400).json({
             status: "failed",
@@ -49,15 +54,19 @@ const generateToken = (payload, refresh = false) => {
 }
 
 const verifyRefreshToken = (req, res, next) => {
-    const autheader = req.headers('authorization');
-    if (autheader == null){
+    // const authHeader = req.headers('authorization');
+    let authHeader = "";
+    if (req.headers.hasOwnProperty("authorization")) {
+      authHeader = req.headers["authorization"];
+    }
+    if (authHeader == null){
         res.status(400).json({
             status: "failed",
             data: [],
             error: 'Authorization not found',
           });
     }
-    const token = autheader.split(' ')[1];
+    const token = authHeader.split(' ')[1];
     if (token == null){
         res.status(400).json({
             status: "failed",

@@ -1,7 +1,7 @@
 const express = require('express');
 const Model = require('../Model/memberModel');
 const router = express.Router();
-const {verifyToken, verifyRefreshToken} = require('../lib/utils');
+const {verifyToken} = require('../lib/utils');
 
 
 // GET collections
