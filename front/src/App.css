@@ -83,7 +83,6 @@ input,
 textarea {
   outline: none;
   resize: none;
-  border: 0px solid;
 }
 
 ul {

@@ -1,0 +1,91 @@
+textarea, input{
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: none;
+    box-shadow: inherit;
+    overflow: visible;
+}
+textarea:hover, input:hover{
+    border: 2px solid #a733bb;
+}
+.section{
+    width: 100%;
+    background-color: var(--white);
+    color: var(--white);
+}
+section{
+    background-color: #6141e2;
+    color: var(--white);
+    width: 100%;
+    padding: 100px 0;
+}
+section h1{
+    margin-top: 50px;
+    font-size: 36px;
+    text-align: center;
+}
+.noColor{
+    background-color: var(--white);
+    color: black;
+}
+.container{
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60%;
+    border: 2px solid #a733bb;
+    border-radius: .25rem;
+}
+.section div{
+    margin: 1em auto;
+}
+.buttonLogin{
+    background: linear-gradient(to right, #7d4ac7 0%, #a733bb 100%);
+    color: var(--white);
+    padding: 10px 35px;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+.buttonLogin:hover{
+    background: linear-gradient(to left, #7d4ac7 0%, #a733bb 100%);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+input.checkbox{
+    display: inline;
+    width: 14px;
+}
+.row div{
+    min-width: 40%;
+}
+.row a{
+    color: black;
+}
+.blueLink{
+    text-align: center;
+}
+.blueLink a{
+    color: var(--blue);
+}

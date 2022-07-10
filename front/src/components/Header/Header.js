@@ -19,9 +19,21 @@ export default function Header() {
         }
         //console.log(buttonMenu.getAttribute('aria-expanded'));
     }
+    
+       
+    window.addEventListener("scroll", ()=>{
+        let headerScroll = document.querySelector("header");
+        let windowScroll = window.pageYOffset;
+        if (windowScroll >= 80) {
+            headerScroll.classList.add(`${styleHeader.menuSticky}`);
+        } else {
+            headerScroll.classList.remove(`${styleHeader.menuSticky}`);
+        }
+    })
+
 
     return (
-        <div className={styleHeader.header}>
+        <header className={styleHeader.header}>
             <div className={styleHeader.logo}>
                 <Link to={`/`}>
                     <img src={imgLogo} alt="Logo" />
@@ -71,6 +83,6 @@ export default function Header() {
                     </ul>
                 </div>
             </div>
-        </div>
+        </header>
     );
 }
