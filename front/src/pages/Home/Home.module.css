@@ -1,0 +1,8 @@
+.section{
+    width: 100%;
+    padding: 10em 5%;
+    background-color: var(--cyan);
+    color: black;
+}
+
+.section h1{font-size: 5em; font-weight: 700; text-align: center;}

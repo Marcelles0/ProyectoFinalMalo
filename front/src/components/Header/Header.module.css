@@ -1,0 +1,124 @@
+.logo{
+    padding: 0 2% 0 0;
+    display: flex;
+    justify-content: right;
+}
+.logo img{
+    width: 50%;
+    height: auto;
+}
+.header{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: .5% 0;
+}
+a{
+    color: var(--white);
+}
+.header div{
+    width: 30%;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+li{
+    margin: 0 1em;
+}
+.login{
+    padding-left: 10%;
+}
+
+.buttonResponsive{
+    display: none;
+    justify-content: right;
+}
+
+.buttonCollapsed div{
+    width: 80%;
+    margin: 6px auto;
+    height: 1px;
+    background-color: #000;
+}
+
+.buttonCollapsed{
+    border: 2px solid #ffffff;
+    background: #ffffff;
+    border-radius: 10px;
+    height: 45px;
+    width: 45px;
+}
+
+.navbarExpanded{
+    display: none;
+    position: absolute;
+    top: 75px;
+    width: 80% !important;
+    margin: 6px auto;
+}
+.navbarExpanded a{
+    color: #000;
+}
+.show{
+    display: block;
+}
+
+.navbarExpanded ul{
+    background: #ffffff;
+    padding: 10px 0;
+    border: 1px solid #dddddd;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbarExpanded ul li{
+    margin: 1em;
+}
+
+@media only screen and (max-width: 1024px) {
+    .logo img{
+        width: 40%;
+    }
+    .header{
+        margin: 2.5% 0;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .logo img{
+        width: 35%;
+    }
+    .header{
+        margin: 2.5% 0;
+    }
+    .menu{
+        display: none;
+    }
+    .buttonResponsive{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .logo img{
+        width: 30%;
+    }
+    .header{
+        margin: 2.5% 0;
+    }
+    .menu{
+        display: none;
+    }
+    .buttonResponsive{
+        display: flex;
+    }
+}
