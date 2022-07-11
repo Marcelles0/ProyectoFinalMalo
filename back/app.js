@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const members = require('./Controller/memberController');
 const login = require('./Controller/loginController');
@@ -24,6 +25,7 @@ database.once('connected', ()=>{
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 app.use('/members', members);
 app.use('/login', login);
 
